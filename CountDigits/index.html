@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="number" name="" id="digit"><br><br>
+        <input type="number" name="" id="low"><br><br>
+        <input type="number" name="" id="high"><br><br>
+        <button type="submit">DigiT</button>
+    </div>
+    <div class="display">
+
+    </div>
+    <script>
+        digit = document.querySelector("#digit");
+        low = document.querySelector("#low");
+        high = document.querySelector("#high");
+        display = document.querySelector(".display");
+        btn = document.querySelector("button");
+        const arr = []
+        let counter = 0
+        btn.addEventListener("click", ()=>{
+            num1 = digit.value
+            num2 = low.value
+            num3 = high.value
+
+            for (let i = num2; i <= num3; i++) {
+                arr.push(i)
+            }
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].toString().includes(num1)) {
+                    counter ++
+                }                                
+            }
+            display.innerText = counter
+        })
+        
+        
+    </script>
+</body>
+</html>
